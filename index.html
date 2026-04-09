@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Развилка ULTIMATE</title>
+<title>Развилка PANORAMA FINAL</title>
 
 <style>
 html { scroll-behavior:smooth; }
@@ -21,19 +21,30 @@ header {
     background:#020617;
 }
 
-input {
-    width:80%;
-    padding:15px;
-    border-radius:10px;
-    border:none;
-    margin-top:20px;
+nav {
+    display:flex;
+    gap:15px;
+    padding:10px;
+    background:#020617;
+    overflow-x:auto;
+    position:sticky;
+    top:0;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    flex-shrink:0;
+}
+
+section {
+    padding:40px;
 }
 
 .grid {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
-    padding:30px;
 }
 
 .card {
@@ -44,13 +55,18 @@ input {
 
 iframe {
     width:100%;
-    height:200px;
+    height:220px;
     border:none;
     border-radius:10px;
 }
 
-h2 {color:#22c55e;padding-left:30px}
-
+input {
+    width:80%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    margin-top:15px;
+}
 </style>
 
 <script>
@@ -69,64 +85,79 @@ cards[i].style.display=text.includes(input)?"block":"none";
 <body>
 
 <header>
-<h1>Развилка — REAL ULTIMATE 💀</h1>
+<h1>Развилка 💀 PANORAMA</h1>
 <input id="search" onkeyup="search()" placeholder="поиск...">
 </header>
 
+<nav>
+<a href="#cafe">Кафе</a>
+<a href="#shops">Магазины</a>
+<a href="#edu">Образование</a>
+<a href="#sport">Спорт</a>
+</nav>
+
+<section id="cafe">
 <h2>🍕 Кафе</h2>
 <div class="grid">
 
 <div class="card">
 <h3>Додо Пицца</h3>
-<iframe src="https://yandex.ru/map-widget/v1/?text=Додо Пицца Развилка"></iframe>
+<iframe src="https://yandex.ru/map-widget/v1/?text=Додо Пицца Развилка&l=stv"></iframe>
 </div>
 
 <div class="card">
-<h3>Кофейни</h3>
-<iframe src="https://yandex.ru/map-widget/v1/?text=кофейня Развилка"></iframe>
+<h3>Шаурма</h3>
+<iframe src="https://yandex.ru/map-widget/v1/?text=шаурма Развилка&l=stv"></iframe>
 </div>
 
 </div>
+</section>
 
+<section id="shops">
 <h2>🛒 Магазины</h2>
 <div class="grid">
 
 <div class="card">
 <h3>Пятёрочка</h3>
-<iframe src="https://yandex.ru/map-widget/v1/?text=Пятерочка Развилка"></iframe>
+<iframe src="https://yandex.ru/map-widget/v1/?text=Пятерочка Развилка&l=stv"></iframe>
 </div>
 
 <div class="card">
 <h3>Магнит</h3>
-<iframe src="https://yandex.ru/map-widget/v1/?text=Магнит Развилка"></iframe>
+<iframe src="https://yandex.ru/map-widget/v1/?text=Магнит Развилка&l=stv"></iframe>
 </div>
 
 </div>
+</section>
 
+<section id="edu">
 <h2>🏫 Образование</h2>
 <div class="grid">
 
 <div class="card">
 <h3>Школа</h3>
-<iframe src="https://yandex.ru/map-widget/v1/?text=школа Развилка"></iframe>
+<iframe src="https://yandex.ru/map-widget/v1/?text=школа Развилка&l=stv"></iframe>
 </div>
 
 <div class="card">
 <h3>Детский сад</h3>
-<iframe src="https://yandex.ru/map-widget/v1/?text=детский сад Развилка"></iframe>
+<iframe src="https://yandex.ru/map-widget/v1/?text=детский сад Развилка&l=stv"></iframe>
 </div>
 
 </div>
+</section>
 
+<section id="sport">
 <h2>💪 Спорт</h2>
 <div class="grid">
 
 <div class="card">
 <h3>Фитнес</h3>
-<iframe src="https://yandex.ru/map-widget/v1/?text=фитнес Развилка"></iframe>
+<iframe src="https://yandex.ru/map-widget/v1/?text=фитнес Развилка&l=stv"></iframe>
 </div>
 
 </div>
+</section>
 
 </body>
 </html>
